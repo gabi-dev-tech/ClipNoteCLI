@@ -1,0 +1,60 @@
+import { StyleSheet } from "react-native";
+
+export const formStyle = StyleSheet.create({
+  cardContainer: {
+    width: 370,
+    alignSelf: "center",
+    borderColor: "gray",
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: "white",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    marginVertical: 10,
+    padding: 16,
+    marginBottom: 50,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    backgroundColor: "#f3f3f3",
+    borderRadius: 6,
+    padding: 10,
+    marginBottom: 10,
+    color: "#222",
+  },
+  form: {
+    marginTop: 10,
+  },
+  label: {
+    fontWeight: "600",
+    marginTop: 10,
+  },
+  input_field: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 8,
+    marginTop: 4,
+    padding: 10,
+    fontSize: 16,
+    backgroundColor: "#fff",
+  },
+  button: {
+    backgroundColor: "#2196F3",
+    borderRadius: 10,
+    paddingVertical: 16,
+    marginTop: 20,
+    alignItems: "center",
+    elevation: 2,
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+    letterSpacing: 1,
+    fontSize: 16,
+    textTransform: "uppercase",
+  },
+});
