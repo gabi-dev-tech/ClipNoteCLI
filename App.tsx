@@ -1,11 +1,9 @@
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/app/(tabs)/Home';
 import FormComponent from './src/app/(tabs)/FormComponent';
 import { IconButton } from 'react-native-paper';
 import { NotesProvider } from './src/context/NotesContext';
-import Toast from 'react-native-toast-message';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,8 +14,7 @@ export default function App() {
         <Tab.Navigator
           screenOptions={({ route }: any) => ({
             tabBarIcon: ({ color, size }: any) => {
-              let iconName;
-
+              let iconName: string = '';
               if (route.name === 'Notas') {
                 iconName = 'home-account';
               } else if (route.name === 'Agregar') {

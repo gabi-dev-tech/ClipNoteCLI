@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export const homeStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -12,7 +11,7 @@ export const homeStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     fontSize: 32, 
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   cardContainer: {
     borderWidth: 1, 
@@ -37,10 +36,11 @@ export const homeStyle = StyleSheet.create({
   headCard: {
     flexDirection: 'row', 
     justifyContent: 'space-between',
-    padding: 4
+    alignItems: 'center',
+    padding: 2
   },
   bodyCard: {
     gap: 4,
-    padding: 4
+    padding: 2
   }
 });

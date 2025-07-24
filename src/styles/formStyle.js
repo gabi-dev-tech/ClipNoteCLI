@@ -15,7 +15,7 @@ export const formStyle = StyleSheet.create({
     elevation: 5,
     marginVertical: 10,
     padding: 16,
-    marginBottom: 50,
+    marginBottom: 50
   },
   title: {
     fontSize: 20,
