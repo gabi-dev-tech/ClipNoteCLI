@@ -21,10 +21,14 @@ export default function App() {
               iconName = 'plus-circle-outline';
             }
 
-            return <IconButton icon={iconName} size={size} color={color} />;
+            return <IconButton icon={iconName} size={size} iconColor={color} />;
           },
           tabBarActiveTintColor: '#2196F3',
           tabBarInactiveTintColor: 'gray',
+          headerStyle: {
+            backgroundColor: '#2196F3',
+          },
+          headerTintColor: 'white',
         })}
       >
         <Tab.Screen name="Notas" component={Home} />

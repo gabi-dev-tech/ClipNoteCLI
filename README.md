@@ -1,97 +1,96 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ClipNote 📋✨
 
-# Getting Started
+    ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 
-## Step 1: Start Metro
+    **ClipNote** es una aplicación web moderna y ligera diseñada para gestionar tu historial del portapapeles de forma inteligente. Guarda, busca y organiza fácilmente el
+      texto que copias en tu día a día.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Demo / Captura de Pantalla
 
-```sh
-# Using npm
-npm start
+![alt text](image.png)
 
-# OR using Yarn
-yarn start
-```
+---
 
-## Step 2: Build and run your app
+## 🚀 Características Principales
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **Historial Automático:** Guarda automáticamente cada texto que copias.
+- **Interfaz Limpia:** Una interfaz de usuario minimalista y moderna construida con React y Tailwind CSS.
+- **Búsqueda Rápida:** Encuentra clips antiguos al instante con una búsqueda potente.
+- **Ligero y Rápido:** Construido con Vite para un rendimiento de desarrollo y producción excepcional.
+- **Fácil de Usar:** Simplemente abre la app y tu historial estará ahí.
 
-### Android
+---
 
-```sh
-# Using npm
-npm run android
+## 🛠️ Stack Tecnológico
 
-# OR using Yarn
-yarn android
-```
+- **Frontend:** [React.js](https://reactjs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
+- **Linting:** [ESLint](https://eslint.org/)
 
-### iOS
+  ***
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## ⚙️ Instalación y Uso Local
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Para correr este proyecto en tu máquina local, sigue estos simples pasos:
 
-```sh
-bundle install
-```
+    1.  **Clona el repositorio**
+        ```sh
+        git clone https://github.com/tu-usuario/ClipNote.git
+       ```
 
-Then, and every time you update your native dependencies, run:
+2.  **Navega al directorio del proyecto**
 
-```sh
-bundle exec pod install
-```
+    ```sh
+     cd ClipNote
+    ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+3.  **Instala las dependencias**
 
-```sh
-# Using npm
-npm run ios
+    ```sh
+    npm install
 
-# OR using Yarn
-yarn ios
-```
+    ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+4.  **Inicia el servidor de desarrollo**
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+    npm run dev
 
-## Step 3: Modify your app
+5.  Abre `http://localhost:5173` (o el puerto que indique Vite) en tu navegador para ver la aplicación.
 
-Now that you have successfully run the app, let's make changes!
+    ***
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🤝 Cómo Contribuir
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+    ¡Las contribuciones son lo que hace a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear! Cualquier contribución que hagas será **muy
+      apreciada**.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Si tienes una sugerencia para mejorar esto, por favor haz un fork del repositorio y crea un pull request. También puedes simplemente abrir un issue con la etiqueta
+"enhancement".
 
-## Congratulations! :tada:
+1.  Haz un **Fork** del Proyecto.
+2.  Crea tu **Feature Branch** (`git checkout -b feature/AmazingFeature`).
+3.  Haz **Commit** de tus cambios (`git commit -m 'Add some AmazingFeature'`).
+4.  Haz **Push** a la Branch (`git push origin feature/AmazingFeature`).
+5.  Abre un **Pull Request**.
 
-You've successfully run and modified your React Native App. :partying_face:
+    ***
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+    ## 📄 Licencia
 
-# Troubleshooting
+    Distribuido bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+    ---
 
-# Learn More
+    ## 📧 Contacto
 
-To learn more about React Native, take a look at the following resources:
+    Gabi-dev – gabrielsuarez89@gmail.com
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+    Link del Proyecto: [https://clip-note-ecru.vercel.app/](https://clip-note-ecru.vercel.app/)

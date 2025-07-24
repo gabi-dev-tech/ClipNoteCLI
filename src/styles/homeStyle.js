@@ -9,8 +9,8 @@ export const homeStyle = StyleSheet.create({
   },
   titulo: {
     fontSize: 32,
-    marginTop: 40,
-    marginBottom: 40,
+    marginTop: 20,
+    marginBottom: 20,
     fontSize: 32, 
     fontWeight: 'bold'
   },
