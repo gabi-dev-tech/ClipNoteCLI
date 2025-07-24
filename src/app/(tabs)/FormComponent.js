@@ -11,10 +11,12 @@ import Toast from "react-native-toast-message";
 import { formStyle } from "../../styles/formStyle";
 import { isTitleUnique } from "../../helpers/isTitleUnique";
 import { API_URL } from '@env';
+import { useNotes } from "../../context/NotesContext";
 
-export default function FormComponent({ onNotesClick, data }) {
+export default function FormComponent({ data }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const { refetch } = useNotes();
 
   const handleSubmit = async () => {
     if (isTitleUnique(title, data)) {
@@ -36,6 +38,7 @@ export default function FormComponent({ onNotesClick, data }) {
         body: `action=add&Titulo=${title}&Contenido=${content}`,
       });
       if (!response.ok) throw new Error("Error al enviar la nota");
+      
       Toast.show({
         type: "success",
         text1: "Operación exitosa",
@@ -47,7 +50,7 @@ export default function FormComponent({ onNotesClick, data }) {
       });
       setTitle("");
       setContent("");
-      onNotesClick && onNotesClick();
+      refetch();
     } catch (error) {
       console.error('Error al enviar nota.')
     }

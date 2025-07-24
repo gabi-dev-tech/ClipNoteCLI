@@ -4,16 +4,10 @@ import { FlatList } from "react-native";
 import Toast from "react-native-toast-message";
 import { homeStyle } from "../../styles/homeStyle";
 import { API_URL } from '@env';
+import { useNotes } from "../../context/NotesContext";
 
 export default function Home() {
-  const [data, setData] = useState([]);
-
-  const getData = () => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => setData(data.slice(1)))
-      .catch((err) => console.error("Error al obtener la data", err));
-  };
+  const { data, loading, refetch } = useNotes();
 
   const handleDelete = (itemId) => {
     Alert.alert("¿Estás seguro?", "No puedes revertir estos cambios!", [
@@ -28,7 +22,6 @@ export default function Home() {
             body: `action=delete&ID=${itemId}`,
           })
             .then(() => {
-              getData();
               Toast.show({
                 type: "success",
                 text1: "Operación exitosa",
@@ -38,6 +31,7 @@ export default function Home() {
                 autoHide: true,
                 topOffset: 1,
               });
+              refetch();
             })
             .catch(() => {
               Alert.alert("Error", "Error al eliminar");
@@ -62,15 +56,11 @@ export default function Home() {
     </View>
   );
 
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <View style={homeStyle.container}>
       <Toast />
       <Text style={homeStyle.titulo}>ClipNote...</Text>
-      {data.length > 0 ? (
+      {data.length > 0 && !loading ? (
         <FlatList
           data={data}
           renderItem={renderItem}
