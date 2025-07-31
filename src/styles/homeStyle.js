@@ -27,7 +27,8 @@ export const homeStyle = StyleSheet.create({
   },
   labels: {
     fontSize: 12, 
-    color: 'gray'
+    color: 'gray',
+    fontWeight: 'bold'
   },
   containerLista: {
     width: 370,
@@ -38,6 +39,11 @@ export const homeStyle = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 2
+  },
+  headCardRight: {
+    flexDirection: 'row', 
+    alignItems: 'center',
+    gap: 10,
   },
   bodyCard: {
     gap: 4,

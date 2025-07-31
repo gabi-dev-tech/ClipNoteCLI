@@ -55,17 +55,21 @@ export default function Home() {
       <View style={homeStyle.cardContainer}>
         <View style={homeStyle.headCard}>
           <Text style={homeStyle.labels}>{`Nota ${item[0]}`}</Text>
-          {loadingBtn && isLoading ? (
-            <ActivityIndicator size="small" color="#2196F3" />
-          ) : (
-            <IconButton
-              icon="trash-can-outline"
-              size={16}
-              iconColor="white"
-              onPress={() => handleDelete(item[0])}
-              style={{ backgroundColor: '#2196F3' }}
-            />
-          )}
+          <View style={homeStyle.headCardRight}>
+            <Text style={{  color: 'gray', fontWeight: 'bold', fontSize: 12, }}>{item[3]}</Text>
+            <Text style={{ color: 'gray', fontWeight: 'bold', fontSize: 12, }}>{item[4]}</Text>
+            {loadingBtn && isLoading ? (
+              <ActivityIndicator size="small" color="#2196F3" />
+            ) : (
+              <IconButton
+                icon="trash-can-outline"
+                size={16}
+                iconColor="white"
+                onPress={() => handleDelete(item[0])}
+                style={{ backgroundColor: '#2196F3' }}
+              />
+            )}
+          </View>
         </View>
         <View style={homeStyle.bodyCard}>
           <Text style={homeStyle.labels}>Titulo</Text>

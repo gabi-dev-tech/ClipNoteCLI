@@ -13,12 +13,15 @@ import { formStyle } from '../../styles/formStyle';
 import { isTitleUnique } from '../../helpers/isTitleUnique';
 import { API_URL } from '@env';
 import { useNotes } from '../../context/NotesContext';
+import { useCurrentHour } from '../../helpers/useCurrentHour';
 
 export default function FormComponent() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [loadingBtn, setLoadingBtn] = useState(false);
   const { data, refetch } = useNotes();
+  const { hora, fecha } = useCurrentHour();
+
 
   const handleSubmit = async () => {
     setLoadingBtn(true);
@@ -52,7 +55,7 @@ export default function FormComponent() {
       const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `action=add&Titulo=${title}&Contenido=${content}`,
+        body: `action=add&Titulo=${title}&Contenido=${content}&Hora=${hora}&Fecha=${fecha}`,
       });
       if (!response.ok) throw new Error('Error al enviar la nota');
 
